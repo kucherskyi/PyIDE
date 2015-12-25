@@ -25,6 +25,7 @@ def harmony(*args):
 
     print b/len(args)
 
+
 fac(12)
 my_args(12,'sad',11)
 harmony(12,32)
