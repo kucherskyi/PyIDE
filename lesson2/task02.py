@@ -24,7 +24,6 @@ def harmony(*args):
         b += float(ar)
 
     print b/len(args)
-    
 
 fac(12)
 my_args(12,'sad',11)
