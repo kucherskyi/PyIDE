@@ -1,29 +1,31 @@
 import sys
 
 def fac(a):
-    if a == 0:
-        return 1
-    return fac(a-1) * a
-    
-# print fac(int(sys.argv[1])) 
+    def inside_fac(a):
+        if a == 0:
+            return 1
+        return inside_fac(a-1) * a
+    print 'Factorial of %s is %s'% (a, inside_fac(a))
 
-def prin(*args):
+
+def my_args(*args):
+    numbe = 0
+    lis = []
     for ar in args:
-        return ar
-        
-# print prin(sys.argv[1:])
+        numbe +=1
+        lis.append(ar)
+        print '%s argument is %s' % (numbe, str(ar))
+    print 'Or just list of them: %s' % (lis)
 
-def medi(*args):
+
+def harmony(*args):
     b = 0.0
     for ar in args:
-        for elem in ar:
-            b += float(elem)
-    
-    
-        
-    print b/len(args)
-    
+        b += float(ar)
 
-fac(sys.argv[1])
-prin(sys.argv[1:])
-medi(sys.argv[1:])
+    print b/len(args)
+
+
+fac(12)
+my_args(12,'sad',11)
+harmony(12,32)
